@@ -2,8 +2,6 @@ package ch.benibuehler;
 
 import ch.benibuehler.BaseClasses.SolutionBase;
 import ch.benibuehler.day1.Solution;
-import ch.benibuehler.day5.Solution2;
-import org.apache.commons.lang.time.StopWatch;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -50,19 +48,10 @@ public class Helper {
     }
     public void RunDay5()
     {
-        StopWatch stopWatch = new StopWatch();
-        stopWatch.start();
         SolutionBase solution = new ch.benibuehler.day5.Solution(contentsLineByLine);
         solution.DoAOC();
-        stopWatch.stop();
-        System.out.println("Taken time for part 1: "+ (stopWatch.getTime()/1000));
-
-        stopWatch.reset();
-        stopWatch.start();
-        Solution2 solution2 = new Solution2(contentsLineByLine);
+        SolutionBase solution2 = new ch.benibuehler.day5.Solution2(contentsLineByLine);
         solution2.DoAOC();
-        stopWatch.stop();
-        System.out.println("Taken time for part 2: "+ stopWatch.getTime());
     }
 
     public void RunDay6()
@@ -70,5 +59,11 @@ public class Helper {
         ch.benibuehler.day6.Solution solution6 = new ch.benibuehler.day6.Solution(contentsLineByLine);
         solution6.DoAOC();
         solution6.DoAOCPart2();
+    }
+
+    public void RunDay7()
+    {
+        ch.benibuehler.day7.Solution solution7 = new ch.benibuehler.day7.Solution(contentsLineByLine);
+        solution7.DoAOC();
     }
 }
